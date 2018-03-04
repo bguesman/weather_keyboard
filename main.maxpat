@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 107.0, 97.0, 984.0, 619.0 ],
+		"rect" : [ 34.0, 79.0, 1212.0, 687.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,64 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "meter~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "float" ],
+					"patching_rect" : [ 297.0, 864.0, 80.0, 13.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "ezdac~",
+					"numinlets" : 2,
+					"numoutlets" : 0,
+					"patching_rect" : [ 297.0, 905.0, 45.0, 45.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 8,
+					"outlettype" : [ "", "", "", "int", "int", "", "int", "" ],
+					"patching_rect" : [ 68.0, 1083.329956, 92.5, 22.0 ],
+					"style" : "",
+					"text" : "midiparse"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"extract" : 1,
+					"id" : "obj-1",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "bp.MIDI In.maxpat",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "int" ],
+					"patching_rect" : [ 44.0, 926.0, 133.0, 116.0 ],
+					"varname" : "bp.MIDI In",
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-41",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -45,7 +103,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 484.75, 625.0, 162.0, 22.0 ],
 					"style" : "",
-					"text" : "Vibrato $1"
+					"text" : "Glide $1"
 				}
 
 			}
@@ -71,7 +129,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 287.75, 625.0, 162.0, 22.0 ],
 					"style" : "",
-					"text" : "Waveform $1"
+					"text" : "Output $1"
 				}
 
 			}
@@ -235,7 +293,7 @@
 						"subtype" : "Undefined",
 						"embed" : 1,
 						"snapshot" : 						{
-							"pluginname" : "TyrellN6.auinfo",
+							"pluginname" : "TyrellN6.component",
 							"plugindisplayname" : "TyrellN6",
 							"pluginsavedname" : "TyrellN6",
 							"pluginsaveduniqueid" : 0,
@@ -244,7 +302,7 @@
 							"isbase64" : 1,
 							"sliderorder" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91 ],
 							"slidervisibility" : [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
-							"blob" : "3639.hAGaoMGcv.y0AHv.DTfAGfPBJr.CM3.UzkGbkwUag4VclE1XzUmbkIGUtEVakQEYgQWXXETSeMEUAQUQWYWYxMWZu41UyUmXzkGbkIQX00VcRTERlgkVo4VZzkVXrkldk8TDBvN..............vE.....BgL......D..........B.........v..........P..........E.........fA.........b..........H.........PB+.H......n..........K..........C.........z..........NHDx......vC.A........AP........QDLP......fD+.H......LgPHA......THDx......PE.........XQPfB......W..........F.........jA.........Z7Cf......vFBgD......vgPHC......c.........fGAAJ......7A.........f.........PH.........HBP........i..........I.AL......TB.........l.DP......vI.........fB.........o.D.......fJ.........rB.........rDDX......PK.........3B.........uDDf.......L.........DC.........x.........vL.........PyO.B......07Cf......fMACO......bSvvC......3HLx......PNBiL......nivHC......6HLx.......O.........zyO.B......9HDg......vOAAF.......D.........AEDb......fP.........LD.........DA........PQ.........XD.........GA.........R.........jD.........JA........vRBgD......vjPHA......MIDx......fS+.H......7zO.B......PA........PT.........HkPHC......SA.........U.........T0O.B......V8Cf......vU.........fE.........YA........fV.........rE.....OEgBcNRPM0CU4IWYrwlS1nvHVUlby0yLv.CLvnvHE4FYoEla8vVZzQGakovHt0VOwbiBiz1b831atUlBiz1b8zzajcEZrovHsMWOPkFcig1UJLRay0iPxUVXzglBiz1b8fEbxU1byovHsMWOGEFckovHsMWOVUFauMVZzkmBiz1b8.kbkM2b0IWYJLRay0yRkkmQuwFaucmBiz1b8rTY4Yzarw1a2IiBiz1b8DDazUlbtEFckovHsMWORElaj8VaJLRay0yTzE1XqY0aoMVYJLRay0SPDMkTwnvHsMWOAQzTRIiBiz1b8vjQOEiBiz1b8vjQOIiBi3lc8HiBizlc8bTXzUlBizlc8DDQSIULJLxXs0SagklaJLzXOAWOw.CLt.CLJLxPnI2bwzCLJLxXs0CTC8lbkoPSMQUL831atUlNgM2boclakQlBM0zTwzCLJzTSDESOv3BLvnPSMY0TwzCLJzTSVQTL8.iKv.iBM0DUxziau4VY5D1byk1YtUFYJzTSSISOvnPSMQjL8.iKv.iBM0jUSISOvnPSMYEQxzCLt.CLJLkPgMWY8PiBScWZtcVOv3BLvnvTTIWZm0SLJ.0Tu41Y8.iBPYzarQVOvn.TFkFak0SLJbjQowVY8HiBGM0XgwVY8.iBCgFSgkWOvnvT0ImbO0SLJHUY10yL3jCNJvTQD0CLt.CLJ.UPGUTOvn.TgcVYy8ja8.iBC8lbk4TOynvTrk1Xk0CMJTURe8Fb8.iBMkFYoETO0nPSoQVZP0iMJLxXs0iUCMjBV8VZiklam0SLJzzajUVOvn.TuIGcg0TOvn.TuIGcg0CLt.CLJ.0axQWXxzCLt.CLJ.kTg41Yk0SLv.iKv.iBPITOxn.TBQTOxn.QxYFc8DiBMQUctMUOvnPSTUmaN0yMJzDU04FU8fiBTI2bv0SKwHiBPIWZuIWOvnPS0MzaxUVOvnvPu4FcE4VOwnfTN8Fck0CLJHkUkwVOvnvHi0VOE4jUwnPPzsVOw3BLvn.QkMVO0.iKv.iBSU2b8DCLv3BLvnfQR0CLt.CLJHUYr0iLv3BLvnfUkwVOv3BLvnfTM8FY8.iKv.iBLElXkwVO4n.Uxk1Y8.iBiLVa8TjSVIiBAQ2Z8DiKv.iBDU1X8TCLt.CLJLUcy0SLv.iKv.iBFIUOv3BLvnfTkwVOx.iKv.iBVUFa8.iKv.iBR0zaj0CLt.CLJvTXhUFa8DCLJPkbocVOvnvHi0VOLYzSwnvT441X8HiBTIWZm0SLJbUX1UVOwn.TnMWY8.iKv.iBP8FagIWOvn.QrkWOv3BLvn.QMMUL8DiBD0DQwzSLv.iKv.iBREFck0CLt.CLJXTSSESOvnfQMQTL8.iKv.iBiLVa8vjQOIiBSkmai0iMJPkbocVOwnvUgYWY8DiBPg1bk0CLt.CLJ.0arElb8.iBDwVd8.iKv.iBD0zTwzSLJPTSDESOv3BLvnfTgQWY8.iKv.iBF0zTwzCLJXTSDESOv3BLvnvHi0VOTkmbkwFaJLEZvESOy3BLvn.UMMkbiESOvn.UMQDbzESOv3BLvnvTnAmL8HiKv.iBTUmakISOv3BLvnfQo4VYxzCLt.CLJPUSSI2XxzSLzn.UMQDbzISOv3BLvn.TWQDbz0CLt.CLJ.0USI2X8DiMJPTYzUmak0CLt.CLJLUdtMVOv3BLvnfUz8FQ8.iKv.iBR0TZwzCLJHUSoISOwnfQBkla8.iBN8VZyUVOw3BLvnvSyMlUuwVL8zxLv3BLvnvSyMlUuwlL8zxLv3BLvnvT0IlUuwVOsDCLv3BLvnfSyUlUuwVOsDCLv3BLvnfTMY0ar0SKw.CLt.CLJXjPV8Fa8zRLv.iKv.iBVMjQs8FY8.iBVMjQP8Fa8DiBCUGcuYlY8XiMt.CLJXTSSI2XwzSLznfQMQDbzESOv3BLvnfQMMkbiISOwTiBF0DQvQmL8.iKv.iBKUVdF8Fa8.iKv.iBRU1b8.iKv.iBMg2Tv0CLt.CLJzDdSA2TxMVOvnPPRMkbi0CLJDjTDU1bz0CLJDjTDAGc8.iKv.iBAIUSuQVOvnvHi0VOVMTPwnfUCETOwnPPzQ2T8DiBiLVa8LDZxMWLJPUdvUVOvnfTgQWY8TCLt.CLJPTYvQGZ8TCLt.CLJbUYz0SLv.iKv.iBJnvKu.xTkMFco8lafX1axARcmwVdfL1asAmbkM2bkQFHhklagIWdfPTXzElBu7BHD8jSmPEHT8TUCgDHTgTRSofBjPBIjDiM0HiB+bFYmMVYtUlX5TVXgEVXgEVX5DVXgEVZgQFb5DVXgIVXgEVX5DVXgEVXgUVX5DVXgEVYgUVX5DVXgEVZgUVX5nPXgEVXqEVYgoSXgEVXsEVYgoSXgEVXuEVYgoSXgoSYioSYhoyXgoSXsoyYpoyaooSXkoiXgoiXsoSYkoCZgoCZJjlNoElNoclNvElNvklNgMlNgklNhUlNhklNhwlNiUlNiglNiklNi0VHwQWPxXyLwIWP2XzYuYDZkYzYhcVaFglBqclYi81YoQ1XLEDM4DmbAcSLwIWP27lau81avAEbhA2XvQFbkAmYvcFbnEEbpA2ZvwFbsAmav8FbvETXhIUXjo.RgYVXmEFZSElZgsVXrUTXtE1agAWRhIlXiIFYTIlYhclXnUkXpI1ZVojXtI1ahAGQiI1XiMFYWMlYicFVYMlZJL1ZiwlVwgTPw.yZhUVaXETbzEjL1LSbNETLyfSbxEDMyLWc1cGd4oWbAIUP0LWPyLWc1cGd4oWPxLTPwjzPAEiBDMTPwPVXCETLkE1PAEiYgMTPwbVXCETLLMTPw3zPAESZoMTPwnVXCETLpk1PAEyZgMTPwrVZCETLrE1PAECaoovPAESagMTPwzVZCETLtE1PAEiaoMTPw7VXCETLGMTPw.0PAESTCEjLBETLHITPwLkPAESQBETLIITPwPkPAESUJHTPwnjPAECQBETLWITPwjkPAEiVBETLjElPAECYkITPwPVZBETLj0lPAESYgITPwrjPAESYoITPwTVaBETLlElBBETLlUlPAEiYoITPwXVaBETLmElPAEyYkITPwbVZBETLm0lPAECSBETLnUlPAESSBETLn0lPAEiSBETLoMlPAoPLoUlPAEySBETLoklPAESZqITPwjVaBETLo8lPAEiZgITPwn1XBETLpUlPAEiZmITPwnVZBETLpslPAEiZsITPJDiZuITPwrVXBETLqMlPAEyZkITPwr1YBETLqklPAEyZqITPwrVaBETLq8lPAECagITPwv1XBETLrUlPAECamIjBAECaoITPwv1ZBETLr0lPAECauITPwzVXBETLsMlPAESakITPwz1YBETLsklPAESaqITPwzVaBETLs8lPAEiagofPAEiaiITPw3VYBETLtclPAEiaoITPw31ZBETLt0lPAEiauITPw7VXBETLuMlPAEyakITPw71YBETLGITPw71ZJHTPw7VaBETLu8lPAECTBETLvMlPAECbkITPw.2YBETLQITPw.2ZBETLv0lPAECbuITbDETLvLzRlQlYiQDYhEjBxTSbDETLvLzRlQlYiQDYiETQAMSSG8lXO0zQuI1SAMiRv4lUEEzL8fiLvjiLJ...P.fDzkka1..B.bA.b.PJ.3B.y..O.PD.LAPT.XE.gMPTMHeCzC.......HP..........7...................zP9"
+							"blob" : "3639.hAGaoMGcv.y0AHv.DTfAGfPBJr.CM3.UzkGbkwUag4VclE1XzUmbkIGUtEVakQEYgQWXXETSeMEUAQUQWYWYxMWZu41UyUmXzkGbkIQX00VcRTERlgkVo4VZzkVXrkldk8TDBvN..............vE.....BgL......D..........B.........v..........P..........E.........fA.........b..........H.........PB+.H......n..........K..........C.........z..........NHDx......vC.A........AP........QDLP......fD+.H......LgPHA......THDx......PE.........XQPfB......W..........F.........jA.........Z7Cf......vFBgD......vgPHC......c.........fGAAJ......7A.........f.........PH.........HBP........i..........I.AL......TB.........l.DP......vI.........fB.........o.D.......fJ.........rB.........rDDX......PK.........3B.........uDDf.......L.........DC.........x.........vL.........PyO.B......07Cf......fMACO......bSvvC......3HLx......PNBiL......nivHC......6HLx.......O.........zyO.B......9HTdYpI...vOAAF.......D.........AEDb......fP.........LD.........DA........PQ.........XD.........GA.........R.........jD.........JA........vRBgD......vjPHA......MIDx......fS+.H......7zO.B......PA........PT.........HkPHC......SA.........U.........T0O.B......V8Cf......vU.........fE.........YA........fV.........rE.....OEgBcNRPM0CU4IWYrwlS1nvHVUlby0yLv.CLvnvHE4FYoEla8vVZzQGakovHt0VOwbiBiz1b831atUlBiz1b8zzajcEZrovHsMWOPkFcig1UJLRay0iPxUVXzglBiz1b8fEbxU1byovHsMWOGEFckovHsMWOVUFauMVZzkmBiz1b8.kbkM2b0IWYJLRay0yRkkmQuwFaucmBiz1b8rTY4Yzarw1a2IiBiz1b8DDazUlbtEFckovHsMWORElaj8VaJLRay0yTzE1XqY0aoMVYJLRay0SPDMkTwnvHsMWOAQzTRIiBiz1b8vjQOEiBiz1b8vjQOIiBi3lc8HiBizlc8bTXzUlBizlc8DDQSIULJLxXs0SagklaJLzXOAWOw.CLt.CLJLxPnI2bwzCLJLxXs0CTC8lbkoPSMQUL831atUlNgM2boclakQlBM0zTwzCLJzTSDESOv3BLvnPSMY0TwzCLJzTSVQTL8.iKv.iBM0DUxziau4VY5D1byk1YtUFYJzTSSISOvnPSMQjL8.iKv.iBM0jUSISOvnPSMYEQxzCLt.CLJLkPgMWY8PiBScWZtcVOv3BLvnvTTIWZm0SLJ.0Tu41Y8.iBPYzarQVOvn.TFkFak0SLJbjQowVY8HiBGM0XgwVY8.iBCgFSgkWOvnvT0ImbO0SLJHUY10yL3jCNJvTQD0CLt.CLJ.UPGUTOvn.TgcVYy8ja8.iBC8lbk4TOynvTrk1Xk0CMJTURe8Fb8.iBMkFYoETO0nPSoQVZP0iMJLxXs0iUCMjBV8VZiklam0SLJzzajUVOvn.TuIGcg0TOvn.TuIGcg0CLt.CLJ.0axQWXxzCLt.CLJ.kTg41Yk0SLv.iKv.iBPITOxn.TBQTOxn.QxYFc8DiBMQUctMUOvnPSTUmaN0yMJzDU04FU8fiBTI2bv0SKwHiBPIWZuIWOvnPS0MzaxUVOvnvPu4FcE4VOwnfTN8Fck0CLJHkUkwVOvnvHi0VOE4jUwnPPzsVOw3BLvn.QkMVO0.iKv.iBSU2b8DCLv3BLvnfQR0CLt.CLJHUYr0iLv3BLvnfUkwVOv3BLvnfTM8FY8.iKv.iBLElXkwVO4n.Uxk1Y8.iBiLVa8TjSVIiBAQ2Z8DiKv.iBDU1X8TCLt.CLJLUcy0SLv.iKv.iBFIUOv3BLvnfTkwVOx.iKv.iBVUFa8.iKv.iBR0zaj0CLt.CLJvTXhUFa8DCLJPkbocVOvnvHi0VOLYzSwnvT441X8HiBTIWZm0SLJbUX1UVOwn.TnMWY8.iKv.iBP8FagIWOvn.QrkWOv3BLvn.QMMUL8DiBD0DQwzSLv.iKv.iBREFck0CLt.CLJXTSSESOvnfQMQTL8.iKv.iBiLVa8vjQOIiBSkmai0iMJPkbocVOwnvUgYWY8DiBPg1bk0CLt.CLJ.0arElb8.iBDwVd8.iKv.iBD0zTwzSLJPTSDESOv3BLvnfTgQWY8.iKv.iBF0zTwzCLJXTSDESOv3BLvnvHi0VOTkmbkwFaJLEZvESOy3BLvn.UMMkbiESOvn.UMQDbzESOv3BLvnvTnAmL8HiKv.iBTUmakISOv3BLvnfQo4VYxzCLt.CLJPUSSI2XxzSLzn.UMQDbzISOv3BLvn.TWQDbz0CLt.CLJ.0USI2X8DiMJPTYzUmak0CLt.CLJLUdtMVOv3BLvnfUz8FQ8.iKv.iBR0TZwzCLJHUSoISOwnfQBkla8.iBN8VZyUVOw3BLvnvSyMlUuwVL8zxLv3BLvnvSyMlUuwlL8zxLv3BLvnvT0IlUuwVOsDCLv3BLvnfSyUlUuwVOsDCLv3BLvnfTMY0ar0SKw.CLt.CLJXjPV8Fa8zRLv.iKv.iBVMjQs8FY8.iBVMjQP8Fa8DiBCUGcuYlY8XiLtPCLJXTSSI2XwzSLznfQMQDbzESOv3BLvnfQMMkbiISOwTiBF0DQvQmL8.iKv.iBKUVdF8Fa8.iKv.iBRU1b8.iKv.iBMg2Tv0CLt.CLJzDdSA2TxMVOvnPPRMkbi0CLJDjTDU1bz0CLJDjTDAGc8.iKv.iBAIUSuQVOvnvHi0VOVMTPwnfUCETOwnPPzQ2T8DiBiLVa8LDZxMWLJPUdvUVOvnfTgQWY8TCLt.CLJPTYvQGZ8TCLt.CLJbUYz0SLv.iKv.iBJnvKu.xTkMFco8lafX1axARcmwVdfL1asAmbkM2bkQFHhklagIWdfPTXzElBu7BHD8jSmPEHT8TUCgDHTgTRSofBjPBIjDiM0HiB+bFYmMVYtUlX5TVXgEVXgEVX5DVXgEVZgQFb5DVXgIVXgEVX5DVXgEVXgUVX5DVXgEVYgUVX5DVXgEVZgUVX5nPXgEVXqEVYgoSXgEVXsEVYgoSXgEVXuEVYgoSXgoSYioSYhoyXgoSXsoyYpoyaooSXhoSXkoiXgoiXsoSYkoCZJDlNnklNoElNoclNvElNvklNgMlNgklNhUlNhklNhwlNiUlNiglNikVHwQWPxXyLwIWP2XzYuYDZkYzYhcVaFglBqclYi81YoQ1XMEDM4DmbAcSLwIWP27lau81avEEbhA2XvQFbkAmYvcFbnIEbpA2ZvwFbsAmav8FbvEDRSEFYIoPXlE1YggFUgoVXqEFaEElag8VXvojXhI1XhQVUhYlXmIFZVIlZhs1UKIlah8lXvQzXhM1XiQFViY1XmkkVio1XJr1XrMVawkTPw.CRYUVaHEGcAIiMyD2SAEyL3DmbAQyLyUmc2gWd5EWPSETMyEzLyUmc2gWd5EjLCETLJMTPwPjBCETLjE1PAESYgMTPwXVXCETLmE1PAESSCETLOMTPwjVZCETLpE1PAEiZoMTPwrVXCETLqk1PAECagMTPwvVZCoPPwzVXCETLsk1PAEiagMTPw3VZCETLuE1PAEyQCETLQMTPwH0PAIiPAESRBETLTITPwTjPAEiRBETLUITPwXkPJDTLKITPwPjPAECVBETLZITPwLVaBETLjElPAECYkITPwPVZBETLj0lPAESYgITPwvjPAESYoITPwTVaBETLlElBBETLlUlPAEiYoITPwXVaBETLmElPAEyYkITPwbVZBETLm0lPAESSBETLnUlPAEiSBETLn0lPAEySBETLoMlPAoPLoUlPAECTBETLoklPAESZqITPwjVaBETLo8lPAEiZgITPwn1XBETLpUlPAEiZmITPwnVZBETLpslPAEiZsITPJDiZuITPwrVXBETLqMlPAEyZkITPwr1YBETLqklPAEyZqITPwrVaBETLq8lPAECagITPwv1XBETLrUlPAECamIjBAECaoITPwv1ZBETLr0lPAECauITPwzVXBETLsMlPAESakITPwz1YBETLsklPAESaqITPwzVaBETLs8lPAEiagofPAEiaiITPw3VYBETLtclPAEiaoITPw31ZBETLt0lPAEiauITPw7VXBETLuMlPAEyakITPw71YBETLGITPw71ZJHTPw7VaBETLu8lPAESTBETLvMlPAECbkITPw.2YBETLRITPw.2ZBETLv0lPAECbuITbDETLvLDSlQlYiQDYhEjBxTSbDETLvLDSlQlYiQDYiETQAMiSG8lXP4zQuIFTAMyRv41UEEzL8fiLwDiLJ...P.fDzkka1..B.bA.b.PJ.3B.y..O.PD.LAPT.XE.gMPTMHeCzC.......HP..........7...................zP9"
 						}
 ,
 						"snapshotlist" : 						{
@@ -254,12 +312,12 @@
 									"version" : 2,
 									"minorversion" : 0,
 									"name" : "TyrellN6",
-									"origin" : "TyrellN6.auinfo",
+									"origin" : "TyrellN6.component",
 									"type" : "AudioUnit",
 									"subtype" : "Instrument",
 									"embed" : 0,
 									"snapshot" : 									{
-										"pluginname" : "TyrellN6.auinfo",
+										"pluginname" : "TyrellN6.component",
 										"plugindisplayname" : "TyrellN6",
 										"pluginsavedname" : "TyrellN6",
 										"pluginsaveduniqueid" : 0,
@@ -268,15 +326,15 @@
 										"isbase64" : 1,
 										"sliderorder" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91 ],
 										"slidervisibility" : [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
-										"blob" : "3639.hAGaoMGcv.y0AHv.DTfAGfPBJr.CM3.UzkGbkwUag4VclE1XzUmbkIGUtEVakQEYgQWXXETSeMEUAQUQWYWYxMWZu41UyUmXzkGbkIQX00VcRTERlgkVo4VZzkVXrkldk8TDBvN..............vE.....BgL......D..........B.........v..........P..........E.........fA.........b..........H.........PB+.H......n..........K..........C.........z..........NHDx......vC.A........AP........QDLP......fD+.H......LgPHA......THDx......PE.........XQPfB......W..........F.........jA.........Z7Cf......vFBgD......vgPHC......c.........fGAAJ......7A.........f.........PH.........HBP........i..........I.AL......TB.........l.DP......vI.........fB.........o.D.......fJ.........rB.........rDDX......PK.........3B.........uDDf.......L.........DC.........x.........vL.........PyO.B......07Cf......fMACO......bSvvC......3HLx......PNBiL......nivHC......6HLx.......O.........zyO.B......9HDg......vOAAF.......D.........AEDb......fP.........LD.........DA........PQ.........XD.........GA.........R.........jD.........JA........vRBgD......vjPHA......MIDx......fS+.H......7zO.B......PA........PT.........HkPHC......SA.........U.........T0O.B......V8Cf......vU.........fE.........YA........fV.........rE.....OEgBcNRPM0CU4IWYrwlS1nvHVUlby0yLv.CLvnvHE4FYoEla8vVZzQGakovHt0VOwbiBiz1b831atUlBiz1b8zzajcEZrovHsMWOPkFcig1UJLRay0iPxUVXzglBiz1b8fEbxU1byovHsMWOGEFckovHsMWOVUFauMVZzkmBiz1b8.kbkM2b0IWYJLRay0yRkkmQuwFaucmBiz1b8rTY4Yzarw1a2IiBiz1b8DDazUlbtEFckovHsMWORElaj8VaJLRay0yTzE1XqY0aoMVYJLRay0SPDMkTwnvHsMWOAQzTRIiBiz1b8vjQOEiBiz1b8vjQOIiBi3lc8HiBizlc8bTXzUlBizlc8DDQSIULJLxXs0SagklaJLzXOAWOw.CLt.CLJLxPnI2bwzCLJLxXs0CTC8lbkoPSMQUL831atUlNgM2boclakQlBM0zTwzCLJzTSDESOv3BLvnPSMY0TwzCLJzTSVQTL8.iKv.iBM0DUxziau4VY5D1byk1YtUFYJzTSSISOvnPSMQjL8.iKv.iBM0jUSISOvnPSMYEQxzCLt.CLJLkPgMWY8PiBScWZtcVOv3BLvnvTTIWZm0SLJ.0Tu41Y8.iBPYzarQVOvn.TFkFak0SLJbjQowVY8HiBGM0XgwVY8.iBCgFSgkWOvnvT0ImbO0SLJHUY10yL3jCNJvTQD0CLt.CLJ.UPGUTOvn.TgcVYy8ja8.iBC8lbk4TOynvTrk1Xk0CMJTURe8Fb8.iBMkFYoETO0nPSoQVZP0iMJLxXs0iUCMjBV8VZiklam0SLJzzajUVOvn.TuIGcg0TOvn.TuIGcg0CLt.CLJ.0axQWXxzCLt.CLJ.kTg41Yk0SLv.iKv.iBPITOxn.TBQTOxn.QxYFc8DiBMQUctMUOvnPSTUmaN0yMJzDU04FU8fiBTI2bv0SKwHiBPIWZuIWOvnPS0MzaxUVOvnvPu4FcE4VOwnfTN8Fck0CLJHkUkwVOvnvHi0VOE4jUwnPPzsVOw3BLvn.QkMVO0.iKv.iBSU2b8DCLv3BLvnfQR0CLt.CLJHUYr0iLv3BLvnfUkwVOv3BLvnfTM8FY8.iKv.iBLElXkwVO4n.Uxk1Y8.iBiLVa8TjSVIiBAQ2Z8DiKv.iBDU1X8TCLt.CLJLUcy0SLv.iKv.iBFIUOv3BLvnfTkwVOx.iKv.iBVUFa8.iKv.iBR0zaj0CLt.CLJvTXhUFa8DCLJPkbocVOvnvHi0VOLYzSwnvT441X8HiBTIWZm0SLJbUX1UVOwn.TnMWY8.iKv.iBP8FagIWOvn.QrkWOv3BLvn.QMMUL8DiBD0DQwzSLv.iKv.iBREFck0CLt.CLJXTSSESOvnfQMQTL8.iKv.iBiLVa8vjQOIiBSkmai0iMJPkbocVOwnvUgYWY8DiBPg1bk0CLt.CLJ.0arElb8.iBDwVd8.iKv.iBD0zTwzSLJPTSDESOv3BLvnfTgQWY8.iKv.iBF0zTwzCLJXTSDESOv3BLvnvHi0VOTkmbkwFaJLEZvESOy3BLvn.UMMkbiESOvn.UMQDbzESOv3BLvnvTnAmL8HiKv.iBTUmakISOv3BLvnfQo4VYxzCLt.CLJPUSSI2XxzSLzn.UMQDbzISOv3BLvn.TWQDbz0CLt.CLJ.0USI2X8DiMJPTYzUmak0CLt.CLJLUdtMVOv3BLvnfUz8FQ8.iKv.iBR0TZwzCLJHUSoISOwnfQBkla8.iBN8VZyUVOw3BLvnvSyMlUuwVL8zxLv3BLvnvSyMlUuwlL8zxLv3BLvnvT0IlUuwVOsDCLv3BLvnfSyUlUuwVOsDCLv3BLvnfTMY0ar0SKw.CLt.CLJXjPV8Fa8zRLv.iKv.iBVMjQs8FY8.iBVMjQP8Fa8DiBCUGcuYlY8XiMt.CLJXTSSI2XwzSLznfQMQDbzESOv3BLvnfQMMkbiISOwTiBF0DQvQmL8.iKv.iBKUVdF8Fa8.iKv.iBRU1b8.iKv.iBMg2Tv0CLt.CLJzDdSA2TxMVOvnPPRMkbi0CLJDjTDU1bz0CLJDjTDAGc8.iKv.iBAIUSuQVOvnvHi0VOVMTPwnfUCETOwnPPzQ2T8DiBiLVa8LDZxMWLJPUdvUVOvnfTgQWY8TCLt.CLJPTYvQGZ8TCLt.CLJbUYz0SLv.iKv.iBJnvKu.xTkMFco8lafX1axARcmwVdfL1asAmbkM2bkQFHhklagIWdfPTXzElBu7BHD8jSmPEHT8TUCgDHTgTRSofBjPBIjDiM0HiB+bFYmMVYtUlX5TVXgEVXgEVX5DVXgEVZgQFb5DVXgIVXgEVX5DVXgEVXgUVX5DVXgEVYgUVX5DVXgEVZgUVX5nPXgEVXqEVYgoSXgEVXsEVYgoSXgEVXuEVYgoSXgoSYioSYhoyXgoSXsoyYpoyaooSXkoiXgoiXsoSYkoCZgoCZJjlNoElNoclNvElNvklNgMlNgklNhUlNhklNhwlNiUlNiglNiklNi0VHwQWPxXyLwIWP2XzYuYDZkYzYhcVaFglBqclYi81YoQ1XLEDM4DmbAcSLwIWP27lau81avAEbhA2XvQFbkAmYvcFbnEEbpA2ZvwFbsAmav8FbvETXhIUXjo.RgYVXmEFZSElZgsVXrUTXtE1agAWRhIlXiIFYTIlYhclXnUkXpI1ZVojXtI1ahAGQiI1XiMFYWMlYicFVYMlZJL1ZiwlVwgTPw.yZhUVaXETbzEjL1LSbNETLyfSbxEDMyLWc1cGd4oWbAIUP0LWPyLWc1cGd4oWPxLTPwjzPAEiBDMTPwPVXCETLkE1PAEiYgMTPwbVXCETLLMTPw3zPAESZoMTPwnVXCETLpk1PAEyZgMTPwrVZCETLrE1PAECaoovPAESagMTPwzVZCETLtE1PAEiaoMTPw7VXCETLGMTPw.0PAESTCEjLBETLHITPwLkPAESQBETLIITPwPkPAESUJHTPwnjPAECQBETLWITPwjkPAEiVBETLjElPAECYkITPwPVZBETLj0lPAESYgITPwrjPAESYoITPwTVaBETLlElBBETLlUlPAEiYoITPwXVaBETLmElPAEyYkITPwbVZBETLm0lPAECSBETLnUlPAESSBETLn0lPAEiSBETLoMlPAoPLoUlPAEySBETLoklPAESZqITPwjVaBETLo8lPAEiZgITPwn1XBETLpUlPAEiZmITPwnVZBETLpslPAEiZsITPJDiZuITPwrVXBETLqMlPAEyZkITPwr1YBETLqklPAEyZqITPwrVaBETLq8lPAECagITPwv1XBETLrUlPAECamIjBAECaoITPwv1ZBETLr0lPAECauITPwzVXBETLsMlPAESakITPwz1YBETLsklPAESaqITPwzVaBETLs8lPAEiagofPAEiaiITPw3VYBETLtclPAEiaoITPw31ZBETLt0lPAEiauITPw7VXBETLuMlPAEyakITPw71YBETLGITPw71ZJHTPw7VaBETLu8lPAECTBETLvMlPAECbkITPw.2YBETLQITPw.2ZBETLv0lPAECbuITbDETLvLzRlQlYiQDYhEjBxTSbDETLvLzRlQlYiQDYiETQAMSSG8lXO0zQuI1SAMiRv4lUEEzL8fiLvjiLJ...P.fDzkka1..B.bA.b.PJ.3B.y..O.PD.LAPT.XE.gMPTMHeCzC.......HP..........7...................zP9"
+										"blob" : "3639.hAGaoMGcv.y0AHv.DTfAGfPBJr.CM3.UzkGbkwUag4VclE1XzUmbkIGUtEVakQEYgQWXXETSeMEUAQUQWYWYxMWZu41UyUmXzkGbkIQX00VcRTERlgkVo4VZzkVXrkldk8TDBvN..............vE.....BgL......D..........B.........v..........P..........E.........fA.........b..........H.........PB+.H......n..........K..........C.........z..........NHDx......vC.A........AP........QDLP......fD+.H......LgPHA......THDx......PE.........XQPfB......W..........F.........jA.........Z7Cf......vFBgD......vgPHC......c.........fGAAJ......7A.........f.........PH.........HBP........i..........I.AL......TB.........l.DP......vI.........fB.........o.D.......fJ.........rB.........rDDX......PK.........3B.........uDDf.......L.........DC.........x.........vL.........PyO.B......07Cf......fMACO......bSvvC......3HLx......PNBiL......nivHC......6HLx.......O.........zyO.B......9HTdYpI...vOAAF.......D.........AEDb......fP.........LD.........DA........PQ.........XD.........GA.........R.........jD.........JA........vRBgD......vjPHA......MIDx......fS+.H......7zO.B......PA........PT.........HkPHC......SA.........U.........T0O.B......V8Cf......vU.........fE.........YA........fV.........rE.....OEgBcNRPM0CU4IWYrwlS1nvHVUlby0yLv.CLvnvHE4FYoEla8vVZzQGakovHt0VOwbiBiz1b831atUlBiz1b8zzajcEZrovHsMWOPkFcig1UJLRay0iPxUVXzglBiz1b8fEbxU1byovHsMWOGEFckovHsMWOVUFauMVZzkmBiz1b8.kbkM2b0IWYJLRay0yRkkmQuwFaucmBiz1b8rTY4Yzarw1a2IiBiz1b8DDazUlbtEFckovHsMWORElaj8VaJLRay0yTzE1XqY0aoMVYJLRay0SPDMkTwnvHsMWOAQzTRIiBiz1b8vjQOEiBiz1b8vjQOIiBi3lc8HiBizlc8bTXzUlBizlc8DDQSIULJLxXs0SagklaJLzXOAWOw.CLt.CLJLxPnI2bwzCLJLxXs0CTC8lbkoPSMQUL831atUlNgM2boclakQlBM0zTwzCLJzTSDESOv3BLvnPSMY0TwzCLJzTSVQTL8.iKv.iBM0DUxziau4VY5D1byk1YtUFYJzTSSISOvnPSMQjL8.iKv.iBM0jUSISOvnPSMYEQxzCLt.CLJLkPgMWY8PiBScWZtcVOv3BLvnvTTIWZm0SLJ.0Tu41Y8.iBPYzarQVOvn.TFkFak0SLJbjQowVY8HiBGM0XgwVY8.iBCgFSgkWOvnvT0ImbO0SLJHUY10yL3jCNJvTQD0CLt.CLJ.UPGUTOvn.TgcVYy8ja8.iBC8lbk4TOynvTrk1Xk0CMJTURe8Fb8.iBMkFYoETO0nPSoQVZP0iMJLxXs0iUCMjBV8VZiklam0SLJzzajUVOvn.TuIGcg0TOvn.TuIGcg0CLt.CLJ.0axQWXxzCLt.CLJ.kTg41Yk0SLv.iKv.iBPITOxn.TBQTOxn.QxYFc8DiBMQUctMUOvnPSTUmaN0yMJzDU04FU8fiBTI2bv0SKwHiBPIWZuIWOvnPS0MzaxUVOvnvPu4FcE4VOwnfTN8Fck0CLJHkUkwVOvnvHi0VOE4jUwnPPzsVOw3BLvn.QkMVO0.iKv.iBSU2b8DCLv3BLvnfQR0CLt.CLJHUYr0iLv3BLvnfUkwVOv3BLvnfTM8FY8.iKv.iBLElXkwVO4n.Uxk1Y8.iBiLVa8TjSVIiBAQ2Z8DiKv.iBDU1X8TCLt.CLJLUcy0SLv.iKv.iBFIUOv3BLvnfTkwVOx.iKv.iBVUFa8.iKv.iBR0zaj0CLt.CLJvTXhUFa8DCLJPkbocVOvnvHi0VOLYzSwnvT441X8HiBTIWZm0SLJbUX1UVOwn.TnMWY8.iKv.iBP8FagIWOvn.QrkWOv3BLvn.QMMUL8DiBD0DQwzSLv.iKv.iBREFck0CLt.CLJXTSSESOvnfQMQTL8.iKv.iBiLVa8vjQOIiBSkmai0iMJPkbocVOwnvUgYWY8DiBPg1bk0CLt.CLJ.0arElb8.iBDwVd8.iKv.iBD0zTwzSLJPTSDESOv3BLvnfTgQWY8.iKv.iBF0zTwzCLJXTSDESOv3BLvnvHi0VOTkmbkwFaJLEZvESOy3BLvn.UMMkbiESOvn.UMQDbzESOv3BLvnvTnAmL8HiKv.iBTUmakISOv3BLvnfQo4VYxzCLt.CLJPUSSI2XxzSLzn.UMQDbzISOv3BLvn.TWQDbz0CLt.CLJ.0USI2X8DiMJPTYzUmak0CLt.CLJLUdtMVOv3BLvnfUz8FQ8.iKv.iBR0TZwzCLJHUSoISOwnfQBkla8.iBN8VZyUVOw3BLvnvSyMlUuwVL8zxLv3BLvnvSyMlUuwlL8zxLv3BLvnvT0IlUuwVOsDCLv3BLvnfSyUlUuwVOsDCLv3BLvnfTMY0ar0SKw.CLt.CLJXjPV8Fa8zRLv.iKv.iBVMjQs8FY8.iBVMjQP8Fa8DiBCUGcuYlY8XiLtPCLJXTSSI2XwzSLznfQMQDbzESOv3BLvnfQMMkbiISOwTiBF0DQvQmL8.iKv.iBKUVdF8Fa8.iKv.iBRU1b8.iKv.iBMg2Tv0CLt.CLJzDdSA2TxMVOvnPPRMkbi0CLJDjTDU1bz0CLJDjTDAGc8.iKv.iBAIUSuQVOvnvHi0VOVMTPwnfUCETOwnPPzQ2T8DiBiLVa8LDZxMWLJPUdvUVOvnfTgQWY8TCLt.CLJPTYvQGZ8TCLt.CLJbUYz0SLv.iKv.iBJnvKu.xTkMFco8lafX1axARcmwVdfL1asAmbkM2bkQFHhklagIWdfPTXzElBu7BHD8jSmPEHT8TUCgDHTgTRSofBjPBIjDiM0HiB+bFYmMVYtUlX5TVXgEVXgEVX5DVXgEVZgQFb5DVXgIVXgEVX5DVXgEVXgUVX5DVXgEVYgUVX5DVXgEVZgUVX5nPXgEVXqEVYgoSXgEVXsEVYgoSXgEVXuEVYgoSXgoSYioSYhoyXgoSXsoyYpoyaooSXhoSXkoiXgoiXsoSYkoCZJDlNnklNoElNoclNvElNvklNgMlNgklNhUlNhklNhwlNiUlNiglNikVHwQWPxXyLwIWP2XzYuYDZkYzYhcVaFglBqclYi81YoQ1XMEDM4DmbAcSLwIWP27lau81avEEbhA2XvQFbkAmYvcFbnIEbpA2ZvwFbsAmav8FbvEDRSEFYIoPXlE1YggFUgoVXqEFaEElag8VXvojXhI1XhQVUhYlXmIFZVIlZhs1UKIlah8lXvQzXhM1XiQFViY1XmkkVio1XJr1XrMVawkTPw.CRYUVaHEGcAIiMyD2SAEyL3DmbAQyLyUmc2gWd5EWPSETMyEzLyUmc2gWd5EjLCETLJMTPwPjBCETLjE1PAESYgMTPwXVXCETLmE1PAESSCETLOMTPwjVZCETLpE1PAEiZoMTPwrVXCETLqk1PAECagMTPwvVZCoPPwzVXCETLsk1PAEiagMTPw3VZCETLuE1PAEyQCETLQMTPwH0PAIiPAESRBETLTITPwTjPAEiRBETLUITPwXkPJDTLKITPwPjPAECVBETLZITPwLVaBETLjElPAECYkITPwPVZBETLj0lPAESYgITPwvjPAESYoITPwTVaBETLlElBBETLlUlPAEiYoITPwXVaBETLmElPAEyYkITPwbVZBETLm0lPAESSBETLnUlPAEiSBETLn0lPAEySBETLoMlPAoPLoUlPAECTBETLoklPAESZqITPwjVaBETLo8lPAEiZgITPwn1XBETLpUlPAEiZmITPwnVZBETLpslPAEiZsITPJDiZuITPwrVXBETLqMlPAEyZkITPwr1YBETLqklPAEyZqITPwrVaBETLq8lPAECagITPwv1XBETLrUlPAECamIjBAECaoITPwv1ZBETLr0lPAECauITPwzVXBETLsMlPAESakITPwz1YBETLsklPAESaqITPwzVaBETLs8lPAEiagofPAEiaiITPw3VYBETLtclPAEiaoITPw31ZBETLt0lPAEiauITPw7VXBETLuMlPAEyakITPw71YBETLGITPw71ZJHTPw7VaBETLu8lPAESTBETLvMlPAECbkITPw.2YBETLRITPw.2ZBETLv0lPAECbuITbDETLvLDSlQlYiQDYhEjBxTSbDETLvLDSlQlYiQDYiETQAMiSG8lXP4zQuIFTAMyRv41UEEzL8fiLwDiLJ...P.fDzkka1..B.bA.b.PJ.3B.y..O.PD.LAPT.XE.gMPTMHeCzC.......HP..........7...................zP9"
 									}
 ,
 									"fileref" : 									{
 										"name" : "TyrellN6",
-										"filename" : "TyrellN6.maxsnap",
+										"filename" : "TyrellN6_20171025.maxsnap",
 										"filepath" : "~/Documents/Max 7/Snapshots",
 										"filepos" : -1,
-										"snapshotfileid" : "a38952fd63fc6f0a6aa1aa88c8eb5eda"
+										"snapshotfileid" : "de59067deee8088a9de5981c169650a4"
 									}
 
 								}
@@ -616,7 +674,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 255.0, 156.0, 644.0, 434.0 ],
+						"rect" : [ 34.0, 79.0, 1212.0, 687.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -954,6 +1012,13 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-44", 0 ],
 					"order" : 0,
 					"source" : [ "obj-12", 0 ]
@@ -1070,6 +1135,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-34", 0 ],
 					"source" : [ "obj-25", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-3", 7 ]
 				}
 
 			}
@@ -1240,6 +1312,22 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"order" : 0,
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"order" : 1,
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-52", 1 ],
 					"source" : [ "obj-50", 0 ]
 				}
@@ -1310,7 +1398,10 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-5" : [ "vst~", "vst~", 0 ]
+			"obj-5" : [ "vst~", "vst~", 0 ],
+			"obj-1::obj-9" : [ "MIDI_out_LED", "MIDI_out_LED", 0 ],
+			"obj-1::obj-12::obj-2" : [ "pastebang", "pastebang", 0 ],
+			"obj-1::obj-1" : [ "refresh", "refresh", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -1328,10 +1419,22 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "TyrellN6.maxsnap",
+				"name" : "TyrellN6_20171025.maxsnap",
 				"bootpath" : "~/Documents/Max 7/Snapshots",
 				"patcherrelativepath" : "../../../Documents/Max 7/Snapshots",
 				"type" : "mx@s",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bp.MIDI In.maxpat",
+				"bootpath" : "C74:/packages/BEAP/clippings/BEAP/MIDI",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "pastebang.maxpat",
+				"bootpath" : "C74:/packages/BEAP/misc",
+				"type" : "JSON",
 				"implicit" : 1
 			}
  ],
